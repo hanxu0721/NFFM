@@ -1,0 +1,109 @@
+++ pwd
++ cur_dir=/data3/ads_dm/hanxu8/nFFM/src
++ source /data3/ads_dm/hanxu8/nFFM/src/model.conf
+++ app_name=nffm
+++ num_ps=8
+++ ps_memory=32768
+++ num_worker=10
+++ worker_memory=20480
+++ init_type=0.01
+++ factor_size=16
+++ drop_out=0.9-0.9-0.9
+++ l2_reg=0.001
+++ deep_layers=50-50
+++ max_epochs=20
+++ batch_size=50
+++ learning_rate=0.0001
+++ optimizer=adam
++ source /data3/ads_dm/hanxu8/nFFM/src/run.conf
+++ person=hanxu8
+++ hdfs_root=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm
+++ instance=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/train_new
+++ model=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m
+++ log_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir
+++ auc=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/auc
+++ datawarehouse=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/datawarehouse
+++ field_size=24
+++ today=20190731
+++ cur_time=16.00
++ num_ins=10000
++ num_runs=1
++ info='max_epoch=20 batch_size=50 factor_size=16 drop_out=0.9-0.9-0.9 l2_reg=0.001'
++ deep=deep_layers=50-50
++ learning='optimizer=adam learning_rate=0.0001'
++ echo -e 'max_epoch=20 batch_size=50 factor_size=16 drop_out=0.9-0.9-0.9 l2_reg=0.001 deep_layers=50-50 optimizer=adam learning_rate=0.0001 '
+max_epoch=20 batch_size=50 factor_size=16 drop_out=0.9-0.9-0.9 l2_reg=0.001 deep_layers=50-50 optimizer=adam learning_rate=0.0001 
++ train
++ hdfs dfs -mkdir hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m
+mkdir: `hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m': File exists
++ hdfs dfs -chmod 777 hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m
++ hdfs dfs -rmr 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/*'
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/checkpoint' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/events.out.tfevents.1567491898.xyz1866.hadoop.data.sina.com.cn' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/graph.pbtxt' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37494.data-00000-of-00001' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37494.index' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37494.meta' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37596.data-00000-of-00001' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37596.index' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:05 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37596.meta' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37744.data-00000-of-00001' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37744.index' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37744.meta' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37899.data-00000-of-00001' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37899.index' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-37899.meta' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-38068.data-00000-of-00001' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-38068.index' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
+19/11/03 12:22:06 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 1440 minutes, Emptier interval = 0 minutes.
+Moved: 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/model.ckpt-38068.meta' to trash at: hdfs://ns3-backup/user/ads_dm/.Trash/Current
++ hdfs dfs -mkdir hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir
+mkdir: `hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir': File exists
++ hdfs dfs -chmod 777 hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir
++ hdfs dfs -rmr 'hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir/*'
+rmr: `hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir/*': No such file or directory
++ TensorFlow_Submit --appName=hanxu8_nffm --archives=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/Python_2.7.13_TF_1.2.0.zip#Python --files=./nffm_data_parser.py,./train_hadoop.py,./nffm.py,./config_new.py,./config.py --worker_memory=20480 --worker_cores=2 --num_worker=10 --num_ps=8 --ps_memory=32768 --appType=TensorFlow --mode_local=true --tensorboard=true --data_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/train_new --log_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir/ --train_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/ --command=Python/bin/python train_hadoop.py num_runs=1 num_ins=10000 field_size=24 max_epoch=20 batch_size=50 factor_size=16 drop_out=0.9-0.9-0.9 l2_reg=0.001 deep_layers=50-50 optimizer=adam learning_rate=0.0001
+hadoop jar  /usr/local/tensorflow/SinaDL-1.0.jar com.sina.hadoop.dl.client.Client --appName=hanxu8_nffm --archives=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/Python_2.7.13_TF_1.2.0.zip#Python --files=./nffm_data_parser.py,./train_hadoop.py,./nffm.py,./config_new.py,./config.py --worker_memory=20480 --worker_cores=2 --num_worker=10 --num_ps=8 --ps_memory=32768 --appType=TensorFlow --mode_local=true --tensorboard=true --data_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/train_new --log_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir/ --train_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/ --command=Python/bin/python train_hadoop.py num_runs=1 num_ins=10000 field_size=24 max_epoch=20 batch_size=50 factor_size=16 drop_out=0.9-0.9-0.9 l2_reg=0.001 deep_layers=50-50 optimizer=adam learning_rate=0.0001
+19/11/03 12:22:15 INFO client.Client: Requesting a new application from cluster with 3063 NodeManagers
+19/11/03 12:22:15 INFO client.Client: Verifying our application has not requested more than the maximum memory capability of the cluster 32768 MB per container
+19/11/03 12:22:15 INFO client.Client: Verifying our application has not requested more than the maximum GPU capability of the cluster 4  per container
+19/11/03 12:22:15 INFO client.Client: Verifying our application has not requested more than the maximum  CPU capability of the cluster 8  per container
+19/11/03 12:22:15 INFO client.Client: Will allocate worker, with 20480 MB memory, 2 CPU, 0GPU
+19/11/03 12:22:15 INFO client.Client: Will allocate ps, with 32768 MB memory 1 CPU, 0GPU
+19/11/03 12:22:15 INFO client.Client: Setting up container launch context for our AM
+19/11/03 12:22:15 INFO client.Client: Setting up the launch environment for our AM container
+19/11/03 12:22:15 INFO client.Client: submit host name: 10.75.29.41
+19/11/03 12:22:15 INFO client.Client: {LD_LIBRARY_PATH=:/usr/local/hadoop-2.7.3/lib/native, dl.job.submithostname=10.75.29.41, CLASSPATH={{CLASSPATH}}:.:*:{{HADOOP_CONF_DIR}}:{{HADOOP_HDFS_HOME}}/share/hadoop/common/*:{{HADOOP_HDFS_HOME}}/share/hadoop/common/lib/*:{{HADOOP_HDFS_HOME}}/share/hadoop/hdfs/*:{{HADOOP_HDFS_HOME}}/share/hadoop/hdfs/lib/*:{{HADOOP_YARN_HOME}}/share/hadoop/yarn/*:{{HADOOP_YARN_HOME}}/share/hadoop/mapreduce/lib/*:{{HADOOP_YARN_HOME}}/share/hadoop/mapreduce/*:{{HADOOP_YARN_HOME}}/contrib/capacity-scheduler/*.jar:{{HADOOP_YARN_HOME}}/share/hadoop/yarn/lib/*, dl.job.submithostaddress=10.75.29.41, DMLC_APPLICATION_TYPE=TensorFlow}
+19/11/03 12:22:15 INFO client.Client: Preparing resources for our AM container
+19/11/03 12:22:17 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/SinaDL-7590465782338072834.jar
+19/11/03 12:22:21 INFO client.Client: upload the  achives hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/Python_2.7.13_TF_1.2.0.zip to viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/Python_2.7.13_TF_1.2.0.zip
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/nffm.py
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/nffm_data_parser.py
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/config.py
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/train_hadoop.py
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/config_new.py
+19/11/03 12:22:21 INFO client.Client: Upload path:viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206/GPU_MONITOR.py
+19/11/03 12:22:22 INFO client.Client: AppMaster will start using command: $JAVA_HOME/bin/java -cp $CLASSPATH:main.jar -server -Xms200m -XX:+UseParallelGC -XX:-UseGCOverheadLimit -XX:ParallelGCThreads=4 -Dlog4j.configuration=container-log4j.properties -Dlog4j.rootLogger=INFO,DRFA com.sina.hadoop.dl.util.MyRunJar <LOG_DIR> main.jar com.sina.hadoop.dl.master.ApplicationMaster <LOG_DIR> -appName=hanxu8_nffm -ps_memory=32768 -ps_cores=1 -num_ps=8 -worker_memory=20480 -worker_cores=2 -num_worker=10 -worker_gpu_cores=0 -data_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/train_new -train_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/m/ -appType=TensorFlow -input_mode_local=true -output_mode_local=false -tensorboard=true -log_dir=hdfs://ns3-backup/dw_ext/ad/person/hanxu8/DL/nffm/log_dir/ -command=Python/bin/python,train_hadoop.py,--num_runs=1,--num_ins=10000,--field_size=24,--max_epoch=20,--batch_size=50,--factor_size=16,--drop_out=0.9-0.9-0.9,--l2_reg=0.001,--deep_layers=50-50,--optimizer=adam,--learning_rate=0.0001 1><LOG_DIR>/stdout 2><LOG_DIR>/stderr 
+19/11/03 12:22:22 INFO impl.YarnClientImpl: Submitted application application_1563433337431_19629206
+19/11/03 12:22:22 INFO client.Client: Submitting application application_1563433337431_19629206 to ResourceManager
+19/11/03 12:29:36 INFO client.Client: Application application_1563433337431_19629206 finished with state KILLED at 1572755376685
+Application killed by user.
+19/11/03 12:29:36 INFO impl.YarnClientImpl: Killed application application_1563433337431_19629206
+19/11/03 12:29:36 INFO client.Client: Deleting staging directory viewfs://c9 viewfs://c9/user_ext/ads_dm/.dlStaging/application_1563433337431_19629206
